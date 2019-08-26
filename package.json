@@ -1,0 +1,16 @@
+{
+  "name": "mjlmVendor",
+  "description": "Speed up your vendor visits",
+  "scripts": {
+    "build": "tstl -p tsconfig.json",
+    "test": "pnpm run build && echo 'Not implemented yet'",
+    "watch": "tstl -p tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@types/wow-api": "github:martinjlowm/types-wow-api",
+    "lua-types": "^2.5.2",
+    "tstl": "^2.2.0",
+    "typescript": "^3.5.2",
+    "typescript-to-lua": "^0.26.0"
+  }
+}
