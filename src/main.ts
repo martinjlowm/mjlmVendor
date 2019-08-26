@@ -4,8 +4,25 @@
 
 const f = CreateFrame('Frame', null, UIParent)
 
-const whitelist: { [item: string]: boolean } = {
-  'Strider Meat': true,
+const whitelist: { [itemId: string]: boolean } = {
+  // Heavy Leather
+  '4234': true,
+  // Heavy Hide
+  '4235': true,
+  // Light Hide
+  '783': true,
+  // Light Leather
+  '2318': true,
+  // Medium Hide
+  '4232': true,
+  // Medium Leather
+  '2319': true,
+  // Strider Meat
+  '5469': true,
+  // Thick Hide
+  '8169': true,
+  // Thick Leather
+  '4304': true,
 };
 
 function sellItems() {
@@ -18,7 +35,8 @@ function sellItems() {
       const itemLink = GetContainerItemLink(bag, slot);
 
       if (itemLink) {
-        const [itemName, , rarity, , , , subType] = GetItemInfo(itemLink);
+        const [, , itemId] = string.find(itemLink, 'item:(%d+)');
+        const [, , rarity, , , , subType] = GetItemInfo(itemLink);
 
         let unusableItem: boolean;
         let commonEquippableItem = rarity === 1 && IsEquippableItem(itemLink);
@@ -45,7 +63,7 @@ function sellItems() {
           }
         }
 
-        if (rarity === 0 || unusableItem || whitelist[itemName]) {
+        if (rarity === 0 || unusableItem || whitelist[itemId]) {
           UseContainerItem(bag, slot);
         }
       }
@@ -74,7 +92,7 @@ f.MODIFIER_STATE_CHANGED = function(this: typeof f, _event: string, key: string,
           const itemid = GetContainerItemID(bag, bagSlot);
 	  if (itemid) {
 	    const [, , itemRarity, , , , , , , , vendorPrice] = GetItemInfo(itemid);
-	    if (itemRarity === 0 && vendorPrice > 0) {
+	    if (itemRarity <= 1 && vendorPrice > 0) {
 	      const [, itemCount] = GetContainerItemInfo(bag, bagSlot);
 	      const totalVendorPrice = vendorPrice * itemCount;
 	      if (!lastPrice) {
