@@ -5,24 +5,63 @@
 const f = CreateFrame('Frame', null, UIParent)
 
 const whitelist: { [itemId: string]: boolean } = {
-  // Heavy Leather
-  '4234': true,
-  // Heavy Hide
-  '4235': true,
-  // Light Hide
-  '783': true,
-  // Light Leather
-  '2318': true,
-  // Medium Hide
-  '4232': true,
-  // Medium Leather
-  '2319': true,
-  // Strider Meat
-  '5469': true,
-  // Thick Hide
-  '8169': true,
-  // Thick Leather
-  '4304': true,
+
+  /* Big Bear Meat */ '3730': true,
+  /* Boar Intestines */ '3172': true,
+  /* Boar Ribs */ '2677': true,
+  /* Breath of Wind */ '7081': true,
+  /* Crawler Claw */ '2675': true,
+  /* Crawler Meat */ '2674': true,
+  /* Crisp Spider Meat */ '1081': true,
+  /* Crocolisk Meat */ '2924': true,
+  /* Deviate Scale */ '6470': true,
+  /* Flask of Big Mojo */ '8152': true,
+  /* Giant Clam Meat */ '4655': true,
+  /* Gooey Spider Leg */ '2251': true,
+  /* Heavy Hide */ '4235': true,
+  /* Heavy Kodo Meat */ '12204': true,
+  /* Heavy Leather */ '4234': true,
+  /* Heavy Scorpid Scale */ '15408': true,
+  /* Khadgar's Whisker */ '3358': true,
+  /* Kodo Meat */ '5467': true,
+  /* Large Fang */ '5637': true,
+  /* Lean Wolf Flang */ '1015': true,
+  /* Light Hide */ '783': true,
+  /* Light Leather */ '2318': true,
+  /* Lion Meat */ '3731': true,
+  /* Medium Hide */ '4232': true,
+  /* Medium Leather */ '2319': true,
+  /* Murloc Eye */ '730': true,
+  /* Murloc Fin */ '1468': true,
+  /* Mysery Meat */ '12037': true,
+  /* Naga Scale */ '7072': true,
+  /* Nightcrawlers */ '6530': true,
+  /* Raptor Egg */ '3685': true,
+  /* Raptor Flesh */ '12184': true,
+  /* Raptor Hide */ '4461': true,
+  /* Red Wolf Meat */ '12203': true,
+  /* Ruined Leather Scraps */ '2934': true,
+  /* Scorpid Scale */ '8154': true,
+  /* Scorpid Stinger */ '5466': true,
+  /* Sharp Claw */ '5635': true,
+  /* Slimy Murloc Scale */ '5784': true,
+  /* Small Spider Leg */ '5465': true,
+  /* Small Venom Sac */ '1475': true,
+  /* Spider Ichor */ '3174': true,
+  /* Spider's Silk */ '3182': true,
+  /* Stag Meat */ '5471': true,
+  /* Strider Meat */ '5469': true,
+  /* Tangy Clam Meat */ '5504': true,
+  /* Tender Crab Meat */ '12206': true,
+  /* Thick Hide */ '8169': true,
+  /* Thick Leather */ '4304': true,
+  /* Thick Murloc Scale */ '5785': true,
+  /* Thick Spider's Silk */ '4337': true,
+  /* Tiger Meat */ '12202': true,
+  /* Turtle Meat */ '3712': true,
+  /* Volatile Rum */ '9260': true,
+  /* White Spider Meat */ '12205': true,
+
 };
 
 function sellItems() {
